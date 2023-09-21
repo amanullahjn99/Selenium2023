@@ -5,7 +5,7 @@
 
 3. class (classname)
 
-precatuions:
+precautions:
 1. what ever locator that you choose please make sure it is unqiue enough,
 2. we should avoid the locators that have digits and spaces.
 
