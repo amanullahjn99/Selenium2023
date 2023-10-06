@@ -1,4 +1,4 @@
-package class06;
+package Review02;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
@@ -7,16 +7,15 @@ import org.openqa.selenium.chrome.ChromeDriver;
 
 import java.util.Set;
 
-/*HW2:
-goto gmail.com
-click on help
-click on privacy
-click on terms
-switch the focus on terms page and get the title and print on screeen
-then switch the focus back to the gmail page
-and print the title of the main page on screen
- */
-public class HomeWork2 {
+/*goto gmail.com
+        click on help
+        click on privacy
+        click on terms
+        switch the focus on terms page and get the title and print on screeen
+        then switch the focus back to the gmail page
+        and print the title of the main page on screen
+        */
+public class windowHandle {
     public static void main(String[] args) {
         //instance
         WebDriver driver = new ChromeDriver();
@@ -52,12 +51,17 @@ public class HomeWork2 {
             }
 
         }
+
         System.out.println(driver.getTitle());
         System.out.println(driver.getCurrentUrl());
+
+
 
         driver.switchTo().window(mainPageHandle);
         System.out.println(driver.getTitle());
         System.out.println(driver.getCurrentUrl());
+
+
 
     }
 }
