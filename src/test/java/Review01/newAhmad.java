@@ -1,4 +1,4 @@
-package review;
+package Review01;
 
 public class newAhmad {
     public static void main(String[] args) {
