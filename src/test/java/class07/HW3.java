@@ -2,6 +2,7 @@ package class07;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
+import utils.CommonMethods;
 
 import java.util.List;
 
@@ -12,7 +13,7 @@ import static utils.CommonMethods.openBrowserAndLaunchApplication;
 goto http://35.175.58.98/table-pagination-demo.php
 print the rows that have status  "in progress"
 no use of conatins method allowed */
-public class HW3 {
+public class HW3 extends CommonMethods {
     public static void main(String[] args) throws InterruptedException {
         String url = "http://35.175.58.98/table-search-filter-demo.php";
         String browser = "chrome";

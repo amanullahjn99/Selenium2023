@@ -1,0 +1,11 @@
+Wait:
+    Implicit wait: We wait until the box shows
+    Whenever we are waiting for an element to be found we use implicit wait.
+    Implicit wait is going to wait until"The WEBELEMENT IS FOUND"
+    1)if the element is found , it will end the wait time and move on.
+    2)if the element is not found, (in the duration of time out) it will return us with exception.
+
+    Explicit wait: We use explicit wait  to wait for a certain condition to be fulfilled.
+    Explicit wait is going to wait until the webElement fulfills the condition
+    1)as soon as the condition is fulfilled it moves on to the Next line of Code
+    2) If the condition isn't fulfilled(in the duration of time out), it will give an exception.

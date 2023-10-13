@@ -6,6 +6,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
+import utils.CommonMethods;
 
 import java.time.Duration;
 
@@ -18,7 +19,7 @@ click to change text and get the chnaged text
 click to get hidden button click on it
 click to get tge checkbox selected and print if it is selected or not
  */
-public class HW1 {
+public class HW1 extends CommonMethods {
     public static void main(String[] args) {
         String url = "http://35.175.58.98/synchronization-explicit-wait.php";
         String browser = "chrome";
