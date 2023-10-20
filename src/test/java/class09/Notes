@@ -1,0 +1,99 @@
+KEYS performs keyboard operations:
+locate  the web Element
+and send  keys(Keys.ENTER/TAB/ESCAPE/DELETE)
+Use Case:
+
+if a user story requires to enter key operation
+or you can also use KEYS.DELETE to delete if clear command does not work
+
+
+Action class allows us to do operations such as mimicking mouse operations:
+Hover over
+Drag and drop
+Right click (ContextClick)
+Double click
+Simple click
+etc
+
+Use built when calling multiple methods in Actions class
+
+The build() method in Selenium is used to create a composite action
+that contains all the actions gathered which are ready to be performed.
+The perform() method is used to execute the chain of actions which are built using the
+Action build method.
+USAGE:
+1) Declare the instance
+                  Actions action=new Actions(driver);
+2) action.ContextClick(WebElement).perform();
+3) another way to duse Actions class - use built() method when calling multiple methods in a row:
+                  action.clickAndHold(draggable).moveToElement(droppable).release().build().perform();
+
+
+Why do we need screenshots in testing?
+in testing it is very important to take screenshots in order to prove the our test case
+covered certain functionality
+
+In selenium in order to take a screenshot we will be using
+TakesScreenshot interface
+
+Actions class:
+is given by selenium to capture keyboard and mouse events such as:
+Move to element
+Drag and drop
+double click
+right click
+
+1- Keys: Key are used to send a key to a webElement
+    1.locate the webElement
+    2.webElement.sendkeys(Keys.Enter/Tab/Esc))
+
+ Use case:
+    if a user story says that user hits enter key, u can use keys to mimic the enter key operation
+    or u can also use Keys. Delete to delete if clear command isn't working
+
+2- Action class:
+    i)declare the instance of aciotn class
+    ii)Use the objet to call the function available
+    action.contextClick (WebElement).perform().
+    action.click(WebElement).perform().
+    action.moveToElement(WebElement).perform().
+ When ever u chain diff methods use. build at end to build the chain of actions and perform to execute them,
+    action.clickAndHold().moveToElement().Release().build().perform().
+ use case:
+    drag and drop, right click (context click), scroll,hover
+
+
+ 3- js Executor: allows us to execute java script
+        i) declare the instance
+        ii)js.execute-script(script,element)
+  from where u will get the script? google
+
+  What is the the most common jsExecutescript functionality used---> click()
+
+  because sometimes the regular click operation doesn't work and at that print js click will work
+
+ Use Case:
+    scroll, click, highlight the element boundary
+
+4- Take screenShot
+
+    i)declare the instance
+        TakesScreenShot ts=(TakesScreenShot)driver;
+
+    ii) take screenshot
+        file screenShot=ts.getScreenshotAs(OutputType.FILE);
+
+    iii) to save the screenshot
+        FileUtils.copyFile(screenShot,new File(path));
+
+Dependency needed to save the screenshot---> commons-io
+
+FileUtils.copyFile(screenShot,new File(path));
+    foler where u want to save the screenshot
+
+    system.getProperty(usr.dir)+"/screenshot" +filename+extension
+
+    return u with the current directory path
+
+Use Case:
+    take screenshot if test case passed and also if it failed

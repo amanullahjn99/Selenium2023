@@ -1,4 +1,4 @@
-package HW2;
+package HomeWork;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;

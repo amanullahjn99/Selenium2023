@@ -1,12 +1,14 @@
 package utils;
 
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
+import org.apache.commons.io.FileUtils;
+import org.openqa.selenium.*;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
+import java.io.File;
+import java.io.IOException;
 import java.time.Duration;
 
 public class CommonMethods {
@@ -56,5 +58,21 @@ public class CommonMethods {
         element.click();
     }
 
+    public static void jsClick(WebElement element){
+        JavascriptExecutor js= (JavascriptExecutor) driver;
+        js.executeScript("arguments[0].click();",element);
+    }
 
+    public  static void takeScreenshot(String filename) throws IOException {
+
+        //        declare the isntance
+        TakesScreenshot ts=(TakesScreenshot) driver;
+
+//        take screen shot
+        File ss = ts.getScreenshotAs(OutputType.FILE);
+
+//        then save on computer
+        FileUtils.copyFile(ss,new File(System.getProperty("user.dir")+"\\screenshot\\"+filename+".png"));
+
+    }
 }
